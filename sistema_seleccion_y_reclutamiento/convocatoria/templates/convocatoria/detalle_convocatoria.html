@@ -1,0 +1,80 @@
+{% extends 'master.html' %}
+
+{% block  content %}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Convocatoria para el cargo de {{convocatoria.cargo}}</h1>
+    <p class="mb-4">{{convocatoria.descripcion}}</a>.</p>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <a class="m-0 font-weight-bold btn btn-primary" data-toggle="collapse" href="#collapseaspirante" role="button"
+                aria-expanded="false" aria-controls="collapseExample">
+                Lista de aspirantes Registrados
+            </a>
+        </div>
+        <div class="collapse" id="collapseaspirante">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th>curriculo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for aspirante in aspirantes %}
+                            <tr>
+                                <td>{{aspirante.user.first_name}}</td>
+                                <td>{{aspirante.user.last_name}}</td>
+                                <td><a href="/media/{{aspirante.curriculo}}" target="_blank">{{aspirante.curriculo}}</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- DataTales Example -->
+     <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <a class="m-0 font-weight-bold btn btn-primary" data-toggle="collapse" href="#collapseanonimo" role="button"
+                aria-expanded="false" aria-controls="collapseExample">
+                Lista de aspirantes Anonimos
+            </a>
+        </div>
+        <div class="collapse" id="collapseanonimo">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Nombres</th>
+                                <th>curriculo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for anonimo in aspirantes_anonimos %}
+                            <tr>
+                                <td>{{anonimo}}</td>
+                                <td><a href="/media/{{anonimo.curriculo}}" target="_blank">{{anonimo.curriculo}}</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

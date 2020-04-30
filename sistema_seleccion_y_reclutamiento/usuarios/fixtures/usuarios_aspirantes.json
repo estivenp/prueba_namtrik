@@ -1,0 +1,97 @@
+[
+    {
+        "model": "usuarios.usuario",
+        "pk": 6,
+        "fields": {
+        "password": "pbkdf2_sha256$180000$LGTzviZJixH9$kBZcbKsOz6TESmf9tesDTsgKkwWexOFaANb44qezpnc=",
+        "last_login": "2020-04-29T04:01:26.922Z",
+        "is_superuser": false,
+        "username": "estiven",
+        "first_name": "Estiven",
+        "last_name": "Perdomo",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-04-29T02:58:58.079Z",
+        "tipo_usuario": "Aspirante",
+        "email": "estiven@aspirante.com",
+        "groups": [],
+        "user_permissions": []
+        }
+    },
+    {
+        "model": "usuarios.usuario",
+        "pk": 7,
+        "fields": {
+        "password": "pbkdf2_sha256$180000$LGTzviZJixH9$kBZcbKsOz6TESmf9tesDTsgKkwWexOFaANb44qezpnc=",
+        "last_login": "2020-04-29T04:01:26.922Z",
+        "is_superuser": false,
+        "username": "jonatha",
+        "first_name": "Jonathan",
+        "last_name": "Ibarra",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-04-29T02:58:58.079Z",
+        "tipo_usuario": "Aspirante",
+        "email": "jonathan@aspirante.com",
+        "groups": [],
+        "user_permissions": []
+        }
+    },
+    {
+        "model": "usuarios.usuario",
+        "pk": 8,
+        "fields": {
+        "password": "pbkdf2_sha256$180000$LGTzviZJixH9$kBZcbKsOz6TESmf9tesDTsgKkwWexOFaANb44qezpnc=",
+        "last_login": "2020-04-29T04:01:26.922Z",
+        "is_superuser": false,
+        "username": "santiago",
+        "first_name": "Santiago",
+        "last_name": "Quijano",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-04-29T02:58:58.079Z",
+        "tipo_usuario": "Aspirante",
+        "email": "santiago@aspirante.com",
+        "groups": [],
+        "user_permissions": []
+        }
+    },
+    {
+        "model": "usuarios.usuario",
+        "pk": 9,
+        "fields": {
+        "password": "pbkdf2_sha256$180000$LGTzviZJixH9$kBZcbKsOz6TESmf9tesDTsgKkwWexOFaANb44qezpnc=",
+        "last_login": "2020-04-29T04:01:26.922Z",
+        "is_superuser": false,
+        "username": "carolina",
+        "first_name": "Carolina",
+        "last_name": "Solis",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-04-29T02:58:58.079Z",
+        "tipo_usuario": "Aspirante",
+        "email": "carolina@aspirante.com",
+        "groups": [],
+        "user_permissions": []
+        }
+    },
+    {
+        "model": "usuarios.usuario",
+        "pk": 6,
+        "fields": {
+        "password": "pbkdf2_sha256$180000$LGTzviZJixH9$kBZcbKsOz6TESmf9tesDTsgKkwWexOFaANb44qezpnc=",
+        "last_login": "2020-04-29T04:01:26.922Z",
+        "is_superuser": false,
+        "username": "cristian",
+        "first_name": "Cristian",
+        "last_name": "Caicedo",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-04-29T02:58:58.079Z",
+        "tipo_usuario": "Aspirante",
+        "email": "cristian@aspirante.com",
+        "groups": [],
+        "user_permissions": []
+        }
+    }
+]

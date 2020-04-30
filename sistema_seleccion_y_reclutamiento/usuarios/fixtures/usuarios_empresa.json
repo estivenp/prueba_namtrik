@@ -1,0 +1,78 @@
+[
+    {
+        "model": "usuarios.usuario",
+        "pk": 2,
+        "fields": {
+        "password": "pbkdf2_sha256$180000$LGTzviZJixH9$kBZcbKsOz6TESmf9tesDTsgKkwWexOFaANb44qezpnc=",
+        "last_login": "2020-04-29T04:01:26.922Z",
+        "is_superuser": false,
+        "username": "namtrik",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-04-29T02:58:58.079Z",
+        "tipo_usuario": "Empresa",
+        "email": "namtrik@empresa.com",
+        "groups": [],
+        "user_permissions": []
+        }
+    },
+    {
+        "model": "usuarios.usuario",
+        "pk": 3,
+        "fields": {
+        "password": "pbkdf2_sha256$180000$LGTzviZJixH9$kBZcbKsOz6TESmf9tesDTsgKkwWexOFaANb44qezpnc=",
+        "last_login": "2020-04-29T04:01:26.922Z",
+        "is_superuser": false,
+        "username": "alcaldia",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-04-29T02:58:58.079Z",
+        "tipo_usuario": "Empresa",
+        "email": "alcaldia@empresa.com",
+        "groups": [],
+        "user_permissions": []
+        }
+    },
+    {
+        "model": "usuarios.usuario",
+        "pk": 4,
+        "fields": {
+        "password": "pbkdf2_sha256$180000$LGTzviZJixH9$kBZcbKsOz6TESmf9tesDTsgKkwWexOFaANb44qezpnc=",
+        "last_login": "2020-04-29T04:01:26.922Z",
+        "is_superuser": false,
+        "username": "Proccess",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-04-29T02:58:58.079Z",
+        "tipo_usuario": "Empresa",
+        "email": "proccess@empresa.com",
+        "groups": [],
+        "user_permissions": []
+        }
+    },
+    {
+        "model": "usuarios.usuario",
+        "pk": 5,
+        "fields": {
+        "password": "pbkdf2_sha256$180000$LGTzviZJixH9$kBZcbKsOz6TESmf9tesDTsgKkwWexOFaANb44qezpnc=",
+        "last_login": "2020-04-29T04:01:26.922Z",
+        "is_superuser": false,
+        "username": "unicauca",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-04-29T02:58:58.079Z",
+        "tipo_usuario": "Empresa",
+        "email": "unicauca@empresa.com",
+        "groups": [],
+        "user_permissions": []
+        }
+    }
+]

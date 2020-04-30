@@ -1,0 +1,32 @@
+{% extends 'master.html' %}
+
+{% block title %} Aplicar Anonimo {% endblock %}
+
+{% block content%}
+
+<div class="col-lg-3"></div>
+
+<div class="col-lg-7">
+    <div class="p-5">
+        <div class="text-center">
+            <h1 class="h4 text-gray-900 mb-4">Aplicar sin registrarse</h1>
+        </div>
+        <form class="user" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                {{form.nombre_completo}}
+                {{ form.nombre_completo.errors }}
+            </div>
+            <div class="form-group">
+                <label for="">Suba su curriculo</label>
+                {{form.curriculo}}
+                {{ form.curriculo.errors }}
+            </div>
+            <button type="submit"class="btn btn-primary btn-user btn-block">
+                Aplicar
+            </button>
+        </form>
+    </div>
+</div>
+
+{% endblock%}
