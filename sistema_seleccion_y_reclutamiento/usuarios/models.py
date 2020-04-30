@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
+from django.core.exceptions import ValidationError
+from .validators import validate_file_extension,validate_file_size
 
 
 # usuario
@@ -26,15 +28,6 @@ class Usuario(AbstractUser):
             empresa_perfil = self.empresaperfil
         return empresa_perfil
 
-# Funcion que valida que solo se suban archivos .pdf
-def validate_file_extension(value):
-    import os
-    from django.core.exceptions import ValidationError
-    ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
-    valid_extensions = ['.pdf']
-    if not ext.lower() in valid_extensions:
-        raise ValidationError(u'Solo soporta archivos .pdf')
-
 
 # Perfiles, (empresa,aspirante y anonimo), el administrador es el superadmin y no es necesario crear un perfil
 
@@ -45,7 +38,7 @@ class AspirantePerfil(models.Model):
     user = models.OneToOneField(
         Usuario, primary_key=True, on_delete=models.CASCADE)
     curriculo = models.FileField(upload_to='curriculos', blank=True, validators=[
-                                 validate_file_extension])
+                                validate_file_extension,validate_file_size])
 
     def __str__(self):
         return self.user.username
@@ -66,7 +59,7 @@ class EmpresaPerfil(models.Model):
 class AnonimoPerfil(models.Model):
     nombre_completo = models.CharField(max_length=120, null=False)
     curriculo = models.FileField(upload_to='curriculos_anonimos', validators=[
-                                 validate_file_extension])
+                                validate_file_extension,validate_file_size])
 
     def __str__(self):
         return self.nombre_completo

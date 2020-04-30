@@ -120,7 +120,7 @@ GRAPHENE = {
     'SCHEMA': 'apis.schema.ROOT_SCHEMA',
     'MIDDLEWARE': [
         'graphql_jwt.middleware.JSONWebTokenMiddleware',
-    ]
+    ],
 }
 
 AUTHENTICATION_BACKENDS = [

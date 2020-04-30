@@ -1,10 +1,10 @@
+from graphene_django.forms.mutation import DjangoModelFormMutation
+from convocatoria.forms import CrearConvocatoriaApiModelForm
 from graphene_django import DjangoObjectType
 from convocatoria.models import Convocatoria as ConvocatoriaModel
 from graphene import relay, ObjectType
 from graphene_django.filter import DjangoFilterConnectionField
-from graphene_django.forms.mutation import DjangoModelFormMutation, DjangoFormMutation
-from convocatoria.forms import CrearConvocatoriaModelForm
-from graphql_jwt.decorators import login_required
+from graphql_jwt.decorators import login_required,permission_required
 
 class Convocatoria(DjangoObjectType):
     class Meta:
@@ -15,22 +15,26 @@ class Convocatoria(DjangoObjectType):
             'estado': ['exact'],
             'empresa': ['exact'],
         }
-        interfaces = (relay.Node, )
-
+        interfaces = (relay.Node,)
+    
 class Query(ObjectType):
+    """Consultas de la app blog"""
     convocatorias = DjangoFilterConnectionField(Convocatoria)
     convocatoria = relay.Node.Field(Convocatoria)
 
     @login_required
-    def resolve_convocatoria(self, info, *args, **kwargs):
+    def resolve_convocatorias(self,info,*args,**kwargs):
         return ConvocatoriaModel.objects.filter(**kwargs)
 
-class ReservaMutation(DjangoModelFormMutation):
+
+class CrearConvocatoria(DjangoModelFormMutation):
     class Meta:
-        form_class = CrearConvocatoriaModelForm
+        form_class = CrearConvocatoriaApiModelForm
 
 class Mutation(ObjectType):
-    convocatoria = ReservaMutation.Field()
+    crear_convocatoria = CrearConvocatoria.Field()
 
-
+    @login_required
+    def resolve_crear_convocatoria(self,info,*args,**kwargs):
+        return CrearConvocatoriaApiModelForm.objects.filter(**kwargs)
 

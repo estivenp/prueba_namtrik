@@ -17,7 +17,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFxvMgphBZ/Dkw="
 					},
-					"name": "PackageDiagram1",
+					"name": "package_diagram",
 					"ownedViews": [
 						{
 							"_type": "UMLPackageView",
@@ -1771,21 +1771,6 @@
 							},
 							"name": "Api",
 							"ownedElements": [
-								{
-									"_type": "UMLDependency",
-									"_id": "AAAAAAFxvOSFDBja1vg=",
-									"_parent": {
-										"$ref": "AAAAAAFxvNaYiBdfuVs="
-									},
-									"name": "utliza",
-									"source": {
-										"$ref": "AAAAAAFxvNaYiBdfuVs="
-									},
-									"target": {
-										"$ref": "AAAAAAFxvOG86Rit2dA="
-									},
-									"stereotype": "access"
-								},
 								{
 									"_type": "UMLDependency",
 									"_id": "AAAAAAFxvSOdZUG47DA=",

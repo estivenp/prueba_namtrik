@@ -1,13 +1,12 @@
-from graphene import ObjectType, String, Schema
-from .convocatoria_schema import Query as ConvocatoriaQuery, Mutation as ConvocatoriaMutation
+from graphene import Schema
+from .convocatoria_schema import Query as ConvocatoriaQuery ,Mutation as ConvocatoriaMutation
 from .auth_schema import Mutation as AuthMutation
-
 
 class Query(ConvocatoriaQuery):
     pass
 
 
-class Mutation(ConvocatoriaMutation, AuthMutation):
+class Mutation(AuthMutation,ConvocatoriaMutation):
     pass
 
 

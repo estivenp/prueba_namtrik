@@ -5,25 +5,6 @@
 	"ownedElements": [
 		{
 			"_type": "UMLModel",
-			"_id": "AAAAAAFF+qBWK6M3Z8Y=",
-			"_parent": {
-				"$ref": "AAAAAAFF+h6SjaM2Hec="
-			},
-			"name": "Model",
-			"ownedElements": [
-				{
-					"_type": "UMLClassDiagram",
-					"_id": "AAAAAAFF+qBtyKM79qY=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Main",
-					"defaultDiagram": true
-				}
-			]
-		},
-		{
-			"_type": "UMLModel",
 			"_id": "AAAAAAFxvQBZcIFLA/4=",
 			"_parent": {
 				"$ref": "AAAAAAFF+h6SjaM2Hec="
@@ -36,7 +17,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFxvQBZcIFLA/4="
 					},
-					"name": "DeploymentDiagram1",
+					"name": "deply_diagram",
 					"ownedViews": [
 						{
 							"_type": "UMLNodeView",
@@ -3072,14 +3053,6 @@
 							"stereotype": "ODBC"
 						}
 					]
-				},
-				{
-					"_type": "UMLNode",
-					"_id": "AAAAAAFxvRcBSISzj9s=",
-					"_parent": {
-						"$ref": "AAAAAAFxvQBZcIFLA/4="
-					},
-					"name": "Node1"
 				}
 			]
 		}
