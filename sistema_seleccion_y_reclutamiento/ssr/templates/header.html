@@ -23,9 +23,9 @@
         <li class="nav-item dropdown no-arrow">
             <a href="{% url 'login' %}" class="nav-link dropdown-toggle btn btn-facebook btn-block">Iniciar Sesion</a>
         </li>
-        <!-- <li class="nav-item dropdown no-arrow">
+        <li class="nav-item dropdown no-arrow">
             <a href="{% url 'usuarios.signup' %}" class="nav-link dropdown-toggle btn btn-facebook btn-block">Registrarme</a>
-        </li> -->
+        </li>
         {% else %}
         <!-- Nav Item - User Information -->
         <li class="nav-item dropdown no-arrow">
@@ -34,7 +34,7 @@
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{user.username}}</span>
                 <img class="img-profile rounded-circle" src="{% static 'img/logo-usuario.png' %}">
             </a>
-            <!-- Dropdown - User Information -->
+            
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'logout' %}">

@@ -28,9 +28,8 @@ class UsuarioAnonimoView(FormView):
         url = self.request.get_full_path()
         aux = url.split('/')
         id_conv = aux[len(aux)-1]
-        conv = Convocatoria.objects.filter(id=id_conv)[0]
+        form.instance.id_convocatoria=id_conv
         form.save()
-        conv.aspirantes_anonimos.add(form.instance)
         return super().form_valid(form)
 
 @method_decorator(login_required, name='dispatch')
@@ -38,7 +37,6 @@ class UsuarioAspiranteUpdate(UpdateView):
     model = AspirantePerfil
     template_name = 'usuarios/usuario_aspirante.html'
     success_url = '/'
-    # fields = ('first_name','last_name','username','email','password')
     fields = ('curriculo',)
 
     def form_valid(self, form):

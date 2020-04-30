@@ -5,7 +5,6 @@ from django.core.exceptions import ValidationError
 from .validators import validate_file_extension,validate_file_size
 
 
-# usuario
 class Usuario(AbstractUser):
     tipo_usuario = models.CharField(max_length=10, choices=(
         ('Aspirante', 'Aspirante'), ('Empresa', 'Empresa')), default='Aspirante')
@@ -31,8 +30,7 @@ class Usuario(AbstractUser):
 
 # Perfiles, (empresa,aspirante y anonimo), el administrador es el superadmin y no es necesario crear un perfil
 
-# perfil para aspirante ya sea logeado o anonimo
-
+# perfil para aspirante registeado
 
 class AspirantePerfil(models.Model):
     user = models.OneToOneField(
@@ -60,6 +58,7 @@ class AnonimoPerfil(models.Model):
     nombre_completo = models.CharField(max_length=120, null=False)
     curriculo = models.FileField(upload_to='curriculos_anonimos', validators=[
                                 validate_file_extension,validate_file_size])
+    id_convocatoria= models.IntegerField() 
 
     def __str__(self):
         return self.nombre_completo

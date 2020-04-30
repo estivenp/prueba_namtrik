@@ -4,7 +4,6 @@ from convocatoria.models import Convocatoria
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 
-# Usuario=get_user_model()
 
 
 class RegistroUsuarioForm(UserCreationForm):
@@ -36,6 +35,5 @@ class UsuarioAnonimoModelForm(forms.ModelForm):
         }
 
     def save(self, commit=True):
-        # super().save(commit=commit)
         return super().save(commit=commit)
 

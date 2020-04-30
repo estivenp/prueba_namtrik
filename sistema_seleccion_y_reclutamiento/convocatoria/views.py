@@ -18,13 +18,9 @@ class CrearConvocatoriaView(FormView):
 
     def form_valid(self, form):
         empresa = EmpresaPerfil.objects.filter(user=self.request.user)[0]
-        # form.instance.empresa = empresa
+        form.instance.empresa = empresa
         form.save()
         return super().form_valid(form)
-
-    def form_invalid(self, form):
-        print('formulario: ', form)
-        return super().form_invalid(form)
 
 
 class ConvocatoriasView(ListView):
