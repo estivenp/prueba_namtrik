@@ -7,7 +7,7 @@ Este repositorio contiene lo archvos fuente de la pureba tecnica de la empresa n
 * `design`: Esta carpeta contiene los diagramas de clase, paquetes y despliegue del proyecto
 * `sistema_seleccion_y_reclutamiento`: Esta carpeta contiene el codigo fuente del proyecto
 
-##Diagramas
+## Diagramas
 
 Los diagramas se realizaron en la herramienta staruml
 
@@ -30,4 +30,4 @@ python manage.py loaddata usuarios/fixtures/usuarios_empresa.json
 
 python manage.py loaddata usuarios/fixtures/usuarios_aspirante.json
 
-todos los usuarios tienen clave por defecto 'adminlocal123', y van con id del 2 al 9. El id 1 es para el superusuario que cree
+todos los usuarios tienen clave por defecto 'adminlocal123', y van con id del 2 al 9. El id 1 es para el superusuario que se creo
