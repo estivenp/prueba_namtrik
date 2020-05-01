@@ -36,6 +36,9 @@
                             <td></td>
                             {% else %}
                             <td>{{convocatoria.fecha_cierre}} {{convocatoria.hora_cierre}} </td>
+                            {% if user.tipo_usuario == 'Empresa' %}
+                            <td></td>
+                            {% else %}
                             <td>
                                 {% if not user.is_authenticated%}
                                 <a href="{% url 'usuarios.usuario_anonimo' convocatoria.id %}">Aplicar</a>
@@ -43,6 +46,7 @@
                                 <a href="{% url 'usuarios.usuario_aspirante' user.id convocatoria.id %}">Aplicar</a>
                                 {% endif %}
                             </td>
+                            {% endif %}
                             {% endif %}
                         </tr>
                         {% endfor %}
